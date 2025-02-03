@@ -521,26 +521,33 @@ h4 {
 .activity-skills h5 {
     font-size: 2rem;
     color: #070621;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
 .activity-skills p {
     font-size: 1.5rem;
     line-height: 1.5;
+    margin: 1.2rem;
 }
 
 .activity-link-button {
     display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    padding: 1rem 2.8rem;
+    background-color: #070621;
+    border-radius: 4rem;
+    font-size: 1.2rem;
+    color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #b74b4b;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin: 2rem;
 }
 
 .activity-link-button:hover {
-    background-color: #45a049;
+    transform: scale3d(1.03);
+    background-color: #b74b4b;
+    color: #070621;
+    box-shadow: 0 0 25px #b74b4b;
 }
