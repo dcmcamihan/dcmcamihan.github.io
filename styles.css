@@ -560,3 +560,16 @@ h4 {
     border-radius: 10px;
     margin-bottom: 10px;
 }
+
+.js-activities-box {
+    width: 70%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container */
+    border: 2px solid #86a5d3;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(134, 165, 211, 0.8);
+    transition: 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
