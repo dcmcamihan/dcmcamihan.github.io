@@ -562,8 +562,8 @@ h4 {
 }
 
 .js-activities-box {
-    width: 70%; /* Adjust width as needed */
-    margin: 0 auto; /* Center the container */
+    width: 70%; 
+    margin: 0 auto; 
     border: 2px solid #86a5d3;
     padding: 2rem;
     border-radius: 10px;
