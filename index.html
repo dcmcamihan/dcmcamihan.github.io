@@ -1,20 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My First Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Digital Course Portfolio</title>
 </head>
 <body>
-<h1>Hi! I am Dianna Claire Marie C. Amihan</h1>
-<h2>HTML Tasks</h2>
+    <header>
+        <a href="#" class="logo">Dianna</a>
+        <nav>
+            <a href="#home" class="active"> Home</a>
+            <a href="#about" >About me</a>
+            <a href="#skills" >Skills</a>
+            <a href="#projects" >Key Projects</a>
+            <a href="#activities" >Activities</a>
+        </nav>
+    </header>
 
-<ul>
-    <!-- Link to my AmihanExplorePHTours.html-->
-    <li><a href="Travel%20and%20Tour/AmihanExplorePHTours.html">Explore PH Tours</a></li>
-    <!-- Link to my AmihanCourseSchedule.html-->
-    <li><a href="AmihanCourseSchedule.html">2nd Term Course Schedule</a></li>
-</ul>
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="main-img.svg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Dianna</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Welcome to my Digital Course Portfolio! This website showcases my journey in web development, from the basics of HTML and CSS to more advanced topics in JavaScript. Here, you’ll find my key projects, hands-on activities, and everything I’ve learned along the way. Feel free to explore!</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/dianna-claire-marie-amihan-29ab23293" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/dcmcamihan" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:diannaclairemarie.amihan@gmail.com"><i class="fa-solid fa-at"></i></a>
+                <a href="https://www.facebook.com/share/18K2H6QKvL/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <a href="#about" class="btn">See more</a>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <div class="about-box">
+                <p>
+                    Hi! I’m Dianna Claire Marie C. Amihan, a 2nd-year Computer Science student at Mapúa Malayan Colleges Mindanao with a passion for web development, design, and problem-solving.
+                </p>
+            </div>
+            <div class="journey-text-wrapper">
+                <h4>My Journey in Web Development</h4>
+                <p class="journey-text">
+                    My journey with HTML, CSS, and JavaScript began before this course, but taking Web Programming has truly deepened my understanding and appreciation of front-end development. I’ve always enjoyed designing, and this course has given me the opportunity to be creative while reinforcing my technical skills.
+                </p>
+                <p class="journey-text">
+                    Throughout the semester, I’ve worked on various hands-on activities, applying theory to practice by building interactive web pages. The structured lessons, CodeChum exercises, and weekly challenges have pushed me to refine my skills, transforming my basic knowledge into a solid foundation for real-world web development.
+                </p>
+            </div>
+        </div>
+        <div class="about-img">
+            <img src="about-img.svg" alt="Side view of a girl looking towards the text">
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-top-img">
+            <img src="top-img.png" alt="Top Image">
+        </div>
+
+        <h2>Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill-box">
+                <img src="html-icon.svg" alt="HTML Icon" class="skill-icon">
+                <h3>HTML</h3>
+                <p>Experienced in building well-structured, semantic web pages using HTML5.</p>
+            </div>
+            <div class="skill-box">
+                <img src="css-icon.svg" alt="CSS Icon" class="skill-icon">
+                <h3>CSS</h3>
+                <p>Comfortable styling websites with CSS3, including layouts, animations, and responsive design.</p>
+            </div>
+            <div class="skill-box">
+                <img src="javascript-icon.svg" alt="JavaScript Icon" class="skill-icon">
+                <h3>JavaScript</h3>
+                <p>Knowledgeable in creating interactive web applications with JavaScript, utilizing DOM manipulation and event handling.</p>
+            </div>
+        </div>
+
+        <div class="skills-bottom-img">
+            <img src="bottom-img.png" alt="Bottom Image">
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Key Projects</h2>
+        <div class="projects-container">
+            <div class="project-box">
+                <div class="project-img">
+                    <img src="tokenizer-img.svg" alt="Tokenizer">
+                </div>
+                <div class="project-info">
+                    <h4>Java Tokenizer</h4>
+                    <p>Developed a tokenizer in Java that takes an input phrase and breaks it into individual tokens (words).</p>
+                </div>
+            </div>
+            <div class="project-box filled">
+                <div class="project-img">
+                    <img src="flashcard-img.svg" alt="Flashcard Tool">
+                </div>
+                <div class="project-info">
+                    <h4>Python Flashcard Tool</h4>
+                    <p>Helped me understand program flow, user interaction, and practical application development.</p>
+                </div>
+            </div>
+            <div class="project-box filled">
+                <div class="project-img">
+                    <img src="inventoryManagement-img.svg" alt="Inventory Management System">
+                </div>
+                <div class="project-info">
+                    <h4>C# Inventory Management System</h4>
+                    <p>My first experience with databases, learning SQL for data management and integration.</p>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-img">
+                    <img src="foodManagement-img.svg" alt="Food Management System">
+                </div>
+                <div class="project-info">
+                    <h4>Java Food Management System</h4>
+                    <p>Strengthened my OOP (Object-Oriented Programming) skills while working on a POS-like application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities">
+        <h2>Activities That Shaped Me</h2>
+        <div class="activities-container">
+            <!-- Activity 1: Explore PH Tours -->
+            <div class="activity-box">
+                <div class="activity-info">
+                    <h4>Explore PH Tours</h4>
+                    <div class="activity-skills filled">
+                        <h5>HTML, CSS, and JavaScript Skills</h5>
+                        <p>In this activity, I created a landing page for Explore PH Tours, a travel agency in the Philippines. I applied HTML semantic tags like <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;footer&gt;</code> to structure the page logically and improve accessibility. CSS was used to style elements, including backgrounds, fonts, and layout properties. I used JavaScript to add interactivity, such as a sticky header that remains visible while scrolling, enhancing user experience.</p>
+                        <!-- Button for Explore PH Tours -->
+                        <a href="Travel%20and%20Tour/AmihanExplorePHTours.html" class="activity-link-button">Go to Explore PH Tours</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 2: HTML Async Activity -->
+            <div class="activity-box">
+                <div class="activity-info">
+                    <h4>HTML Async Activity - 2nd Term Course Schedule Table</h4>
+                    <div class="activity-skills filled">
+                        <h5>HTML Skills</h5>
+                        <p>For this task, I created a table to display my 2nd Term course schedule. I used semantic HTML tags such as <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> to ensure the table was well-structured and accessible. The use of these tags not only improved the visual appearance but also enhanced the table’s accessibility for screen readers, ensuring users with disabilities could navigate the content effectively.</p>
+                        <!-- Button for Course Schedule -->
+                        <a href="AmihanCourseSchedule.html" class="activity-link-button">View Course Schedule</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activity 3: CSS Box Model Activity -->
+            <div class="activity-box">
+                <div class="activity-info">
+                    <h4>CSS Box Model Activity</h4>
+                    <div class="activity-skills filled">
+                        <h5>CSS Skills</h5>
+                        <p>In this activity, I replicated a given design using the CSS Box Model. This task reinforced my understanding of how every HTML element is treated as a box. I applied padding, borders, and margins to achieve the desired layout, ensuring elements were correctly spaced and aligned. The challenge lay in translating the given image into a functional layout, which required careful application of the box model properties.</p>
+                        <!-- Button for CSS Box Model Activity -->
+                        <a href="#" class="activity-link-button">View Box Model Activity</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Activities Section -->
+    <section id="javascript-activities" class="activities">
+        <div class="activity-box">
+            <h3>JavaScript Activities</h3>
+            <!-- JS01 - CountUP -->
+            <div class="activity-container">
+                <div class="activity-box-no-fill">
+                    <div class="activity-inner-box">
+                        <h4>JS01 - CountUP</h4>
+                        <div class="activity-content">
+                            <div class="activity-box-fill">
+                                <h5>JavaScript Skills</h5>
+                                <p>In this activity, I created a simple counter that increments by one every time a button is clicked. I used JavaScript to manipulate the DOM by updating the displayed count inside a <code>&lt;p&gt;</code> tag. This activity strengthened my understanding of event handling and dynamic content updates.</p>
+                                <!-- Button for JS01 - CountUP -->
+                                <a href="js01-countup.html" class="activity-link-button">Go to CountUP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JS02 - TodosList -->
+            <div class="activity-container">
+                <div class="activity-box-no-fill">
+                    <div class="activity-inner-box">
+                        <h4>JS02 - TodosList</h4>
+                        <div class="activity-content">
+                            <div class="activity-box-fill">
+                                <h5>JavaScript Skills</h5>
+                                <p>I developed a to-do list app that allows users to input tasks and display them as list items. The task list updates dynamically with each new entry. I learned how to manipulate arrays and dynamically update the page with JavaScript, solidifying my knowledge of DOM manipulation and array handling.</p>
+                                <!-- Button for JS02 - TodosList -->
+                                <a href="js02-todoslist.html" class="activity-link-button">Go to TodosList</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JS03 - PasswordChange -->
+            <div class="activity-container">
+                <div class="activity-box-no-fill">
+                    <div class="activity-inner-box">
+                        <h4>JS03 - PasswordChange</h4>
+                        <div class="activity-content">
+                            <div class="activity-box-fill">
+                                <h5>JavaScript Skills</h5>
+                                <p>In this activity, I implemented a password change feature where users input and confirm their new password. JavaScript was used to compare the two inputs, and feedback was given based on whether the passwords matched or not. This helped me learn how to validate form input and provide real-time feedback to users.</p>
+                                <!-- Button for JS03 - PasswordChange -->
+                                <a href="js03-passwordchange.html" class="activity-link-button">Go to PasswordChange</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JS04 - Date Difference -->
+            <div class="activity-container">
+                <div class="activity-box-no-fill">
+                    <div class="activity-inner-box">
+                        <h4>JS04 - Date Difference</h4>
+                        <div class="activity-content">
+                            <div class="activity-box-fill">
+                                <h5>JavaScript Skills</h5>
+                                <p>For this task, I calculated the difference in days between two selected dates. The JavaScript Date object was used to perform the calculation, and results were displayed dynamically on the page. I also added validation to ensure the selected dates were valid, learning how to work with dates and user input validation in JavaScript.</p>
+                                <!-- Button for JS04 - Date Difference -->
+                                <a href="js04-datedifference.html" class="activity-link-button">Go to Date Difference</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
