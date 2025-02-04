@@ -323,9 +323,6 @@ h4 {
     text-align: justify;
 }
 
-
-
-
 .skills {
     background-color: #070621;
     text-align: center;
@@ -663,4 +660,12 @@ h4 {
 .activity-link-buttons:hover {
     background-color: #e35b5b;
     box-shadow: 0 0 12px #e35b5b;
+}
+
+#activities {
+    position: relative;  
+    background-image: url('activity-sec.png');
+    background-size: cover;  
+    background-position: center;  
+    height: 130%;  
 }
