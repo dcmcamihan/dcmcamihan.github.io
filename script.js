@@ -1,13 +1,6 @@
-// Select all navigation links
-const navLinks = document.querySelectorAll('nav a');
+// Get the "Activities" section element
+const activitiesSection = document.getElementById("activities");
 
-// Add an event listener to each link
-navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        // Remove 'active' class from all links
-        navLinks.forEach(link => link.classList.remove('active'));
-
-        // Add 'active' class to the clicked link
-        e.target.classList.add('active');
-    });
-});
+// Get the height of the section
+const sectionHeight = activitiesSection.offsetHeight;
+console.log("Activities Section Height:", sectionHeight, "px");
