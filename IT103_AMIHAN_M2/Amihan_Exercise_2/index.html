@@ -1,25 +1,18 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON Exercise</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p id="jsonDisplay"></p>
-    <script>
-        // Create a JavaScript object representing a person
-        const person = {
-            name: "Dianna Claire Marie",
-            age: 20,
-            hobbies: ["painting", "reading", "coding"]
-        };
-
-        // Convert the JavaScript object to a JSON string
-        const jsonString = JSON.stringify(person);
-
-        // Log the JSON string to the console
-        console.log(jsonString);
-
-        // Display the JSON string in the body
-        const jsonDisplay = document.getElementById('jsonDisplay');
-        jsonDisplay.textContent = jsonString;
-    </script>
+    <div class="container">
+        <h1>JSON Example</h1>
+        <button id="showJsonBtn">Show JSON</button>
+        <button id="showFormattedBtn">Show Formatted Data</button>
+        <pre id="output"></pre>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
