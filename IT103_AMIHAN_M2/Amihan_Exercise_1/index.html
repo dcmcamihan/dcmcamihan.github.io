@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Exercise</title>
+</head>
+<body>
+    <p id="message">Click the button below!</p>
+    <button id="clickButton">Click Me</button>
+
+    <script>
+        // Select the button and paragraph elements
+        const button = document.getElementById('clickButton');
+        const paragraph = document.getElementById('message');
+
+        // Add an event listener to the button
+        button.addEventListener('click', function() {
+            paragraph.textContent = 'You clicked the button!';
+        });
+    </script>
+</body>
+</html>
