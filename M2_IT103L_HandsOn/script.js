@@ -26,6 +26,8 @@ function displayImage(data) {
             const imageCaption = imageData.caption;
             const imageUrl = `https://epic.gsfc.nasa.gov/archive/natural/${imageDate.slice(0, 4)}/${imageDate.slice(5, 7)}/${imageDate.slice(8, 10)}/thumbs/${imageName}.jpg`;
 
+
+            
             // Create a new div for each image
             const imageDiv = document.createElement('div');
             imageDiv.classList.add('image-item');
