@@ -4,141 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Quote Generator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f4f4f9;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        #quoteDisplay {
-            margin: 20px 0;
-            font-size: 1.5em;
-            color: #333;
-        }
-
-        #author {
-            font-style: italic;
-            color: #555;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 1em;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin: 10px;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        #copyBtn, #shareBtn {
-            background-color: #28a745;
-        }
-
-        #copyBtn:hover, #shareBtn:hover {
-            background-color: #218838;
-        }
-
-        #quote {
-            color: #333;
-            font-weight: bold;
-        }
-
-        #author {
-            color: #777;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Random Quote Generator</h1>
-    <div id="quoteDisplay">
-        <p id="quote">Click the button to get a random quote!</p>
-        <p id="author"></p>
+    <div class="container">
+        <h1>Random Quote Generator</h1>
+        <div id="quoteDisplay">
+            <p id="quote">Click the button to get a random quote!</p>
+            <p id="author"></p>
+        </div>
+        <div class="buttons">
+            <button id="newQuoteBtn">Get New Quote</button>
+            <button id="copyQuoteBtn">Copy Quote</button>
+            <a id="twitterShareBtn" target="_blank">Share on Twitter</a>
+        </div>
     </div>
-    <button id="newQuoteBtn">Get New Quote</button>
-    <button id="copyBtn">Copy Quote</button>
-    <button id="shareBtn">Share on Twitter</button>
-
-    <script>
-        const quoteElement = document.getElementById('quote');
-        const authorElement = document.getElementById('author');
-        const newQuoteButton = document.getElementById('newQuoteBtn');
-        const copyButton = document.getElementById('copyBtn');
-        const shareButton = document.getElementById('shareBtn');
-
-        // Function to fetch a random quote
-        function fetchQuote() {
-            // Show loading message while fetching
-            quoteElement.textContent = 'Loading quote...';
-            authorElement.textContent = '';
-
-            // Fetch all quotes from the DummyJSON API
-            fetch('https://dummyjson.com/quotes')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Get a random quote from the list of quotes
-                    const randomIndex = Math.floor(Math.random() * data.quotes.length);
-                    const randomQuote = data.quotes[randomIndex];
-
-                    // Display the quote and author
-                    quoteElement.textContent = `"${randomQuote.quote}"`;
-                    authorElement.textContent = `- ${randomQuote.author}`;
-                })
-                .catch(error => {
-                    // Handle any errors that occur during the fetch
-                    console.error('Error fetching quote:', error);
-                    quoteElement.textContent = 'Failed to load quote. Please try again.';
-                    authorElement.textContent = '';
-                });
-        }
-
-        // Function to copy the quote to clipboard
-        function copyQuote() {
-            const quoteText = quoteElement.textContent;
-            if (quoteText && quoteText !== 'Click the button to get a random quote!') {
-                navigator.clipboard.writeText(quoteText).then(() => {
-                    alert('Quote copied to clipboard!');
-                }).catch(err => {
-                    console.error('Failed to copy:', err);
-                });
-            }
-        }
-
-        // Function to share the quote on Twitter
-        function shareQuote() {
-            const quoteText = quoteElement.textContent;
-            const authorText = authorElement.textContent;
-            const twitterUrl = `https://twitter.com/intent/tweet?text="${quoteText}" ${authorText}`;
-            window.open(twitterUrl, '_blank');
-        }
-
-        // Fetch a quote when the button is clicked
-        newQuoteButton.addEventListener('click', fetchQuote);
-
-        // Copy the quote when the copy button is clicked
-        copyButton.addEventListener('click', copyQuote);
-
-        // Share the quote when the share button is clicked
-        shareButton.addEventListener('click', shareQuote);
-
-        // Fetch a quote when the page loads
-        fetchQuote();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
