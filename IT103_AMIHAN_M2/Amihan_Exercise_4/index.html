@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherAPI Example</title>
+</head>
+<body>
+  <h1>WeatherAPI Example</h1>
+  <button onclick="callAPI()">Fetch Weather Data</button>
+  <div>
+    <h2>Weather Details</h2>
+    <p><strong>City:</strong> <span id="weather_city">--</span></p>
+    <p><strong>Temperature:</strong> <span id="weather_temperature">--</span></p>
+    <p><strong>Condition:</strong> <span id="weather_condition">--</span></p>
+  </div>
+  
+  <script>
+    // Replace with your OpenWeatherMap API key
+    const apiKey = 'eb0a641a85d5538d5ddc7f4c55275677'; 
+    // Change this to the city you want to search
+    const city = 'London';
+
+    function callAPI() {
+      // OpenWeatherMap API endpoint
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);  // Log the data for debugging
+
+          // Display the fetched data on the page
+          document.querySelector("#weather_city").textContent = data.name || 'N/A';
+          document.querySelector("#weather_temperature").textContent = `${data.main.temp}°C` || 'N/A';
+          document.querySelector("#weather_condition").textContent = data.weather[0].description || 'N/A';
+        })
+        .catch(error => {
+          console.error('Error fetching weather data:', error);
+          // Handle any errors by displaying a message
+          document.querySelector("#weather_city").textContent = "Error fetching weather data";
+          document.querySelector("#weather_temperature").textContent = '';
+          document.querySelector("#weather_condition").textContent = '';
+        });
+    }
+  </script>
+</body>
+</html>
