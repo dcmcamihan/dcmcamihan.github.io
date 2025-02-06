@@ -1,0 +1,30 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    width: 350px;
+    height: 350px;
+}
+
+.center-image {
+    width: 350px;
+    height: 350px;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-box {
+    width: 350px;
+    height: 80px;
+    border: 3px solid #000;
+    margin: 20px auto 0;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left; 
+}

@@ -3,21 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Manipulation Exercise</title>
+    <title>DOM Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p id="message">Click the button below!</p>
-    <button id="clickButton">Click Me</button>
-
-    <script>
-        // Select the button and paragraph elements
-        const button = document.getElementById('clickButton');
-        const paragraph = document.getElementById('message');
-
-        // Add an event listener to the button
-        button.addEventListener('click', function() {
-            paragraph.textContent = 'You clicked the button!';
-        });
-    </script>
+    <div class="container">
+        <h1 id="header">DOM Example - Exercise 1</h1>
+        <p id="text">Click the button to change this text.</p>
+        <button id="changeTextBtn">Click Me</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
