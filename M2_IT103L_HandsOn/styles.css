@@ -57,4 +57,122 @@ main {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1A1A1A;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+#app-container {
+    background-color: #333;
+    border-radius: 15px;
+    padding: 30px;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Title Styling */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    text-transform: uppercase;
+}
+
+/* Input Container */
+#input-container {
+    margin-bottom: 30px;
+}
+
+#flight-input {
+    padding: 12px;
+    font-size: 18px;
+    width: 70%;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    background-color: #444;
+    color: #fff;
+    outline: none;
+}
+
+#flight-input:focus {
+    border-color: #8BC34A;
+}
+
+/* Track Button */
+#track-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#track-button:hover {
+    background-color: #388E3C;
+}
+
+/* Flight Details Container */
+#flight-details-container {
+    margin-top: 40px;
+    text-align: left;
+    display: none;
+}
+
+/* Loading */
+#loading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFEB3B;
+    display: none;
+}
+
+/* Flight Info */
+#flight-info {
+    font-size: 18px;
+    color: #f1f1f1;
+}
+
+.flight-info-item {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.flight-info-item span {
+    font-weight: bold;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 600px) {
+    #flight-input {
+        width: 80%;
+    }
+
+    #track-button {
+        width: 80%;
+    }
 }
