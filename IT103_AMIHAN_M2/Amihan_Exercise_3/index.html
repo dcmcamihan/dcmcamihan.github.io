@@ -3,34 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch API Exercise</title>
+    <title>Fetch API Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Random User Data</h1>
-    <div id="userData">Loading...</div>
-
-    <script>
-        // Fetch data from a public API
-        fetch('https://randomuser.me/api/')
-            .then(response => response.json()) // Parse the response as JSON
-            .then(data => {
-                // Extract user data from the response
-                const user = data.results[0];
-                const userDataDiv = document.getElementById('userData');
-
-                // Display user data on the page with additional details
-                userDataDiv.innerHTML = `
-                    <p><strong>Name:</strong> ${user.name.first} ${user.name.last}</p>
-                    <p><strong>Email:</strong> ${user.email}</p>
-                    <p><strong>Location:</strong> ${user.location.city}, ${user.location.country}</p>
-                    <p><strong>Phone:</strong> ${user.phone}</p>
-                    <img src="${user.picture.medium}" alt="User Image">
-                `;
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-                document.getElementById('userData').innerHTML = "<p>Error loading user data.</p>";
-            });
-    </script>
+    <div class="container">
+        <h1>Random User Data</h1>
+        <button id="fetchUserBtn">Get Random User</button>
+        <div id="userData"></div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
