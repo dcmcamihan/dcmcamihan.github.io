@@ -13,9 +13,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
+    color: #fff; /* White text for contrast */
     margin: 0;
     padding: 20px;
+    transition: background-color 0.5s ease;
 }
 
 /* Main App Container */
@@ -26,8 +27,9 @@ body {
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     width: 100%;
-    max-width: 450px;
+    max-width: 450px; /* Adjusted width for better balance */
     transition: all 0.3s ease-in-out;
+    animation: fadeIn 1s ease-out;
 }
 
 /* Header Styling */

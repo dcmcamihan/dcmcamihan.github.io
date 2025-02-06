@@ -1,32 +1,29 @@
-const fetchButton = document.getElementById("fetch-button");
+const refreshBtn = document.getElementById("refresh-btn");
+const imageContainer = document.getElementById("image-container");
 const randomImage = document.getElementById("random-image");
-const loading = document.getElementById("loading");
+const loadingIndicator = document.getElementById("loading");
 
-// Function to fetch the random image from PepeBigotes API
+const API_URL = "https://api.api-ninjas.com/v1/randomimage";
+const API_KEY = "W/hHnEgqtiI4IQKpCW4Pzw==u182v0RKBTc9l1Ea"; 
+
 const fetchRandomImage = async () => {
-    loading.style.display = "block";  // Show loading indicator
+    loadingIndicator.style.display = "block"; // Show loading state
     try {
-        const response = await fetch("https://random-image-pepebigotes.vercel.app/api/random-image");
+        const response = await fetch(API_URL, {
+            headers: { "X-Api-Key": API_KEY },
+        });
         const data = await response.json();
-
-        if (data && data.url) {
-            randomImage.src = data.url;  // Set the image source to the API's URL
-            randomImage.alt = "Random Image";
-        } else {
-            randomImage.src = "";  // Clear the image if no URL is found
-            randomImage.alt = "Error";
-        }
+        randomImage.src = data.image_url; // Set the image source to the URL received from the API
+        loadingIndicator.style.display = "none"; // Hide loading state
     } catch (error) {
         console.error("Error fetching image:", error);
-        randomImage.src = "";
-        randomImage.alt = "Error";
-    } finally {
-        loading.style.display = "none";  // Hide loading indicator after fetching
+        loadingIndicator.style.display = "none";
+        alert("Failed to load a new image. Please try again.");
     }
 };
 
-// Event listener to trigger the image fetch on button click
-fetchButton.addEventListener("click", fetchRandomImage);
-
-// Fetch an image when the page loads
+// Fetch a random image when the page loads
 window.onload = fetchRandomImage;
+
+// Refresh the image when the button is clicked
+refreshBtn.onclick = fetchRandomImage;
