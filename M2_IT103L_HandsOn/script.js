@@ -43,4 +43,3 @@ function displayImage(data) {
         alert('No image data available at the moment.');
     }
 }
-
