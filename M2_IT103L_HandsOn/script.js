@@ -2,7 +2,7 @@ document.getElementById('loadImage').addEventListener('click', loadImage);
 
 const API_URL = 'https://epic.gsfc.nasa.gov/api/natural'; 
 
-async function loadImage() {
+async function loadImage() { 
     try {
         const response = await fetch(API_URL);
         const data = await response.json();
