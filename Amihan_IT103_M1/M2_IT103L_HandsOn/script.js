@@ -2,7 +2,7 @@ document.getElementById('loadImage').addEventListener('click', loadImage);
 
 const API_URL = 'https://epic.gsfc.nasa.gov/api/natural'; 
 
-async function loadImage() {
+async function loadImage() { 
     try {
         const response = await fetch(API_URL);
         const data = await response.json();
@@ -26,6 +26,8 @@ function displayImage(data) {
             const imageCaption = imageData.caption;
             const imageUrl = `https://epic.gsfc.nasa.gov/archive/natural/${imageDate.slice(0, 4)}/${imageDate.slice(5, 7)}/${imageDate.slice(8, 10)}/thumbs/${imageName}.jpg`;
 
+
+            
             // Create a new div for each image
             const imageDiv = document.createElement('div');
             imageDiv.classList.add('image-item');
@@ -41,4 +43,3 @@ function displayImage(data) {
         alert('No image data available at the moment.');
     }
 }
-
