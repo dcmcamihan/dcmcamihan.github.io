@@ -1,26 +1,26 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
-    background-color: #f4f4f4;
-    color: #333;
-}
+// Select elements
+const button = document.getElementById('changeTextBtn');
+const text = document.getElementById('text');
+const body = document.body;
 
-.container {
-    margin-top: 50px;
-}
+// Track current theme
+let isDarkMode = false;
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+// Event listener for button click
+button.addEventListener('click', function() {
+    // Change text
+    text.textContent = 'You clicked the button!';
 
-button:hover {
-    background-color: #0056b3;
-}
+    // Toggle between light and dark mode
+    if (isDarkMode) {
+        body.style.backgroundColor = '#f4f4f4';
+        body.style.color = '#333';
+        button.style.backgroundColor = '#007bff';
+    } else {
+        body.style.backgroundColor = '#333';
+        body.style.color = '#fff';
+        button.style.backgroundColor = '#ff9800';
+    }
+
+    isDarkMode = !isDarkMode;
+});
