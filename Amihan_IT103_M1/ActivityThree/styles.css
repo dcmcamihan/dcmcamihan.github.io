@@ -1,0 +1,48 @@
+body {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    margin: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 80px;
+    margin-left: 100px;
+}
+
+.outer-box {
+    padding: 25px;
+    width: 200px;  
+    height: 200px; 
+}
+
+.violet {
+    background-color: #8c38df;
+}
+
+.inner-box {
+    padding: 25px; 
+    color: black;
+    font-weight: bold;
+    width: 150px;  
+    height: 150px;
+}
+
+.inner-box p {
+    margin: 0;
+    padding-top: 0px; 
+    padding-left: 2px; 
+    font-size: 24px; 
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: rgb(0, 234, 255);
+}

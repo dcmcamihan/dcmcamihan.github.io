@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app-container">
+        <h1>Real-Time Flight Tracker</h1>
+        
+        <!-- Form to enter flight number -->
+        <div id="input-container">
+            <input type="text" id="flight-input" placeholder="Enter Flight Number (e.g., AA100)" />
+            <button id="track-button">Track Flight</button>
+        </div>
+
+        <!-- Display flight details -->
+        <div id="flight-details-container">
+            <div id="loading" class="hidden">Loading...</div>
+            <div id="flight-info">
+                <!-- Flight data will be displayed here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
