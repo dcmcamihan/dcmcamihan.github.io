@@ -674,18 +674,31 @@ h4 {
     grid-column: span 2;
     background-color: #b74b4b;
     color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
 }
 
-.jolens-project .activity-link-buttons {
+.jolens-project .project-link-button {
+    display: inline-block;
+    padding: 1rem 2.8rem;
     background-color: #fff;
     color: #b74b4b;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 4rem;
+    transition: 0.3s ease;
+    text-decoration: none;
+    margin-top: 1rem;
 }
 
-.jolens-project .activity-link-buttons:hover {
+.jolens-project .project-link-button:hover {
     background-color: #e35b5b;
     color: #fff;
 }
 
 .jolens-project .project-info h4 {
     color: #fff;
+    margin-bottom: 1rem;
 }
+
