@@ -676,6 +676,34 @@ h4 {
     color: #fff;
     padding: 2rem;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.jolens-project .project-img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.jolens-project .project-img img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.jolens-project .project-info h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.jolens-project .project-info p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    text-align: justify; /* Add this line */
 }
 
 .jolens-project .project-link-button {
@@ -696,9 +724,3 @@ h4 {
     background-color: #e35b5b;
     color: #fff;
 }
-
-.jolens-project .project-info h4 {
-    color: #fff;
-    margin-bottom: 1rem;
-}
-
